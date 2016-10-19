@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CreditCommanderTest">
+    <test name="Test Chrome">
+        <groups>
+            <run>
+                <include name="testCH" />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="TestScript"/>
+        </classes>
+    </test>
+    <test name="Test FireFox">
+        <groups>
+            <run>
+                <include name="testFF" />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="TestScript"/>
+        </classes>
+    </test>
+</suite>
