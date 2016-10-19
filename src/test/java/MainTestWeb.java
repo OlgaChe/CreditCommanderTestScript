@@ -15,7 +15,7 @@ public class MainTestWeb extends MainMethods {
     WebDriver driver;
 
     File dir = new File("src");
-    File ch = new File(dir, "chromedriver");
+    File ch = new File(dir, "chromedriver.exe");
     //File ie = new File(dir, "IEDriverServer.exe");
 
 
