@@ -14,19 +14,29 @@ public class MainTestWeb extends MainMethods {
 
     WebDriver driver;
 
+    String os = System.getProperty("os.name").toLowerCase();
+
     File dir = new File("src");
-    File ch = new File(dir, "chromedriver");
-    //File ie = new File(dir, "IEDriverServer.exe");
+    File chw = new File(dir, "chromedriver.exe");
+    File chl = new File(dir, "chromedriverl");
+    File chm = new File(dir, "chromedriverm");
+    File ie = new File(dir, "IEDriverServer.exe");
 
 
     @BeforeTest(groups = {"testCH"})
     public void  DriverCH() {
-        System.setProperty("webdriver.chrome.driver", String.valueOf(ch));
+        if (os.contains("win")){
+            System.setProperty("webdriver.chrome.driver", String.valueOf(chw));
+        }else if (os.contains("nux") || os.contains("nix")) {
+            System.setProperty("webdriver.chrome.driver", String.valueOf(chl));
+        }else if (os.contains("mac")) {
+            System.setProperty("webdriver.chrome.driver", String.valueOf(chl));
+        }
         driver = new ChromeDriver();
         driver.get(getProperty("baseUrl"));
         driver.manage().window().setSize(new Dimension(1920, 1080));
     }
-
+    
     @BeforeTest(groups = {"testFF"})
     public void  DriverFF() {
         driver = new FirefoxDriver();
