@@ -25,6 +25,7 @@ public class MainTestWeb extends MainMethods {
 
     @BeforeTest(groups = {"testCH"})
     public void  DriverCH() {
+        System.out.println(os);
         if (os.contains("win")){
             System.setProperty("webdriver.chrome.driver", String.valueOf(chw));
         }else if (os.contains("nux") || os.contains("nix")) {
