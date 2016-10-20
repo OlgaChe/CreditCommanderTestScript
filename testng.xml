@@ -13,15 +13,5 @@
             <class name="TestScript"/>
         </classes>
     </test>
-     <test name="Test FireFox">
-        <groups>
-            <run>
-                <include name="testFF" />
-            </run>
-        </groups>
 
-        <classes>
-            <class name="TestScript"/>
-        </classes>
-    </test>
 </suite>
